@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/* Thème global - Golden State Warriors */
+
+/* Définition des variables CSS globales avec :root */
+
+:root {
+    /* Palette de couleurs */
+    --background-dark: #0B132B; /* Thème Sombre avec du noir carbone */
+    --warriors-blue: #1d428a; /* Bleu des Golden State Warriors */
+    --warriors-gold: #FFC72C; /* Jaune des Golden State Warriors */
+    
+    /* Couleurs pour les textes & les bordures */
+    --text-main: #FFFFFF; /* Blanc pour les textes principaux */
+    --text-muted: #8D99AE; /* Gris pour les textes secondaires */
+    --card-background: #121E42; /* Fond pour les cartes */
+
+    /* Typographie */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* CSS universel pour éviter les marges des navigateurs */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* COnfiguration du corps de la page */
+body {
+    background-color: var(--background-dark);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden; /* Empêche le défilement horizontal indésirable */
+}
+
+/* Style pour les liens */
+a {
+    text-decoration: none;
+    color: inherit;
+}
