@@ -1,28 +1,28 @@
 <header class="navbar">
-    <div class="navbar-container">
-        <!-- Logo & Nom -->
-         <a href="#hero" class="navbar-logo">
-            <span class="logo-icon">🏀</span>
-            <span class="logo-text">LudwigPosn</span>
-         </a>
-        
-         <!-- Menu de naviagation en mode Bureau -->
-         <nav class="navbar-links">
-            @for (link of navLinks; track link.label) {
-                <a [href]="link.href" class="nav-link">{{ link.label }}</a>
-            }
-         </nav>
+  <div class="navbar-container">
+    <!-- Logo ou Nom -->
+    <a href="#hero" class="navbar-logo">
+      <span class="logo-icon">🏀</span>
+      <span class="logo-text">Portfolio<span class="highlight">.dev</span></span>
+    </a>
 
-        <!-- Bouton CTA -->
-        <div class="navbar-actions">
-            <a href="#contact" class="btn gold">Contact Me</a>
-        </div>
+    <!-- Menu de navigation Desktop -->
+    <nav class="navbar-links">
+      @for (link of navLinks; track link.label) {
+        <a [href]="link.href" class="nav-link">{{ link.label }}</a>
+      }
+    </nav>
 
-        <!-- Burger Menu pour la version mobile -->
-        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <!-- Bouton CTA (Call to Action) -->
+    <div class="navbar-action">
+      <a href="#contact" class="btn-gold">Me Contacter</a>
     </div>
+
+    <!-- Bouton Hamburger pour mobile (Optionnel / Extensible) -->
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </header>

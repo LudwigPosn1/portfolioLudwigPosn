@@ -1,0 +1,247 @@
+:host {
+    display: block;
+}
+
+main {
+    overflow: hidden;
+}
+
+.content-section {
+    width: min(100% - 3rem, 1120px);
+    margin: 0 auto;
+    padding: 6rem 0;
+    scroll-margin-top: 5rem;
+}
+
+.section-heading {
+    max-width: 680px;
+    margin-bottom: 2.5rem;
+
+    h2 {
+        margin: 0.35rem 0 0.75rem;
+        color: var(--text-main);
+        font-size: clamp(1.8rem, 4vw, 2.65rem);
+        line-height: 1.15;
+        letter-spacing: -0.035em;
+    }
+
+    > p:last-child {
+        color: var(--text-muted);
+        line-height: 1.7;
+    }
+}
+
+.section-eyebrow,
+.project-index {
+    color: var(--warriors-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.project-card,
+.education-card,
+.skills-card {
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    background: linear-gradient(145deg, rgba(18, 30, 66, 0.88), rgba(13, 23, 48, 0.82));
+}
+
+.project-card-featured {
+    grid-column: 1 / -1;
+}
+
+.project-card h3,
+.education-card h3,
+.skills-card h3 {
+    margin: 0.6rem 0;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    line-height: 1.35;
+}
+
+.project-card > p,
+.education-card p,
+.skills-caption {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.project-details,
+.plain-list {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1rem 0 1.25rem;
+    padding-left: 1.2rem;
+    color: #d1d9e8;
+    line-height: 1.6;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    span {
+        padding: 0.35rem 0.65rem;
+        border: 1px solid rgba(29, 66, 138, 0.55);
+        border-radius: 999px;
+        background: rgba(29, 66, 138, 0.25);
+        color: #bfdbfe;
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+}
+
+.journey-section {
+    width: 100%;
+    max-width: none;
+    padding-right: max(1.5rem, calc((100% - 1120px) / 2));
+    padding-left: max(1.5rem, calc((100% - 1120px) / 2));
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.timeline {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 820px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 1.5rem;
+}
+
+.timeline-date {
+    padding-top: 0.2rem;
+    color: var(--warriors-gold);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.timeline-content {
+    padding-left: 1.25rem;
+    border-left: 1px solid rgba(255, 199, 44, 0.35);
+
+    h3 {
+        color: var(--text-main);
+        font-size: 1.05rem;
+    }
+
+    p {
+        margin-top: 0.35rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+    }
+
+    .timeline-location {
+        color: #c4d0e2;
+        font-size: 0.9rem;
+    }
+}
+
+.education-grid,
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.education-period {
+    display: inline-block;
+    color: var(--warriors-gold);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.education-card-current {
+    border-color: rgba(255, 199, 44, 0.3);
+}
+
+.skills-card h3 {
+    margin-top: 0;
+}
+
+.skills-caption {
+    margin-bottom: 1rem;
+    font-size: 0.92rem;
+}
+
+.plain-list {
+    margin-bottom: 0;
+}
+
+.languages-card {
+    align-self: start;
+}
+
+.language-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    span:first-child {
+        color: var(--text-main);
+        font-weight: 600;
+    }
+
+    span:last-child {
+        color: var(--text-muted);
+        text-align: right;
+    }
+}
+
+@media (max-width: 700px) {
+    .content-section {
+        width: min(100% - 2.5rem, 1120px);
+        padding: 4.25rem 0;
+    }
+
+    .project-grid,
+    .education-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card-featured {
+        grid-column: auto;
+    }
+
+    .journey-section {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .timeline-content {
+        padding-bottom: 0.4rem;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,54 @@
+<section id="hero" class="hero-section">
+  <!-- Élément décoratif d'arrière-plan aux couleurs des Warriors -->
+  <div class="hero-glow"></div>
+
+  <div class="hero-container">
+    <!-- Contenu textuel principal -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span> Prêt pour une alternance 🏀
+      </div>
+      
+      <h1 class="hero-title">
+        Salut, moi c'est <span class="highlight-gold">Développeur</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        {{ developerName }} basé à Rennes. Je conçois des architectures web robustes et des interfaces dynamiques. 
+        {{ tagline }}
+      </p>
+
+      <!-- Badges de compétences rapides -->
+      <div class="hero-badges-list">
+        @for (badge of skillsBadges; track badge) {
+          <span class="badge-item">{{ badge }}</span>
+        }
+      </div>
+
+      <!-- Boutons d'action (CTA) -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn-secondary">Me contacter</a>
+      </div>
+    </div>
+
+    <!-- Élément visuel / Carte style "Joueur NBA / Dev" -->
+    <div class="hero-visual">
+      <div class="nba-card">
+        <div class="card-header">
+          <span class="team-tag">GSW DEV TEAM</span>
+          <span class="player-number">#26</span>
+        </div>
+        <div class="card-body">
+          <div class="avatar-placeholder">💻</div>
+          <h3>Fullstack & DevOps</h3>
+          <p class="card-desc">Focus sur la performance, l'UI soignée et l'automatisation.</p>
+        </div>
+        <div class="card-footer">
+          <span>📍 Rennes, France</span>
+          <span class="status-online">● Open to Work</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

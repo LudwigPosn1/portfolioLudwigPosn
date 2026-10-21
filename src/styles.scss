@@ -1,40 +1,41 @@
-/* Thème global - Golden State Warriors */
+/* ==========================================
+   THEME GLOBAL - GOLDEN STATE WARRIORS DARK
+   ========================================== */
 
-/* Définition des variables CSS globales avec :root */
-
+/* Définition des variables CSS globales (:root) */
 :root {
-    /* Palette de couleurs */
-    --background-dark: #0B132B; /* Thème Sombre avec du noir carbone */
-    --warriors-blue: #1d428a; /* Bleu des Golden State Warriors */
-    --warriors-gold: #FFC72C; /* Jaune des Golden State Warriors */
-    
-    /* Couleurs pour les textes & les bordures */
-    --text-main: #FFFFFF; /* Blanc pour les textes principaux */
-    --text-muted: #8D99AE; /* Gris pour les textes secondaires */
-    --card-background: #121E42; /* Fond pour les cartes */
-
-    /* Typographie */
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Palette de couleurs demandée */
+  --bg-dark: #0B132B;          /* Fond sombre / Noir carbone */
+  --warriors-blue: #1D428A;    /* Bleu Marine Warriors */
+  --warriors-gold: #FFC72C;    /* Jaune / Or (Accentuation) */
+  
+  /* Couleurs utilitaires pour le texte et les bordures */
+  --text-main: #FFFFFF;        /* Texte principal blanc */
+  --text-muted: #8D99AE;       /* Texte secondaire gris */
+  --card-bg: #121E42;          /* Fond légèrement plus clair pour les cartes */
+  
+  /* Typographie de base */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* CSS universel pour éviter les marges des navigateurs */
+/* Reset CSS universel pour éviter les marges par défaut des navigateurs */
 *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* COnfiguration du corps de la page */
+/* Configuration du corps de la page (Body) */
 body {
-    background-color: var(--background-dark);
-    color: var(--text-main);
-    font-family: var(--font-family);
-    line-height: 1.6;
-    overflow-x: hidden; /* Empêche le défilement horizontal indésirable */
+  background-color: var(--bg-dark); /* Utilisation de la variable CSS */
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  overflow-x: hidden; /* Empêche le défilement horizontal indésirable */
 }
 
-/* Style pour les liens */
+/* Style global pour les liens */
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
