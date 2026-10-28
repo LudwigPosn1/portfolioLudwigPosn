@@ -1,0 +1,36 @@
+<section id="skills" class="skills-section">
+  <div class="skills-container">
+    
+    <!-- En-tête de section -->
+    <div class="section-header">
+      <span class="section-tag">// EXPERTISE TECHNIQUE</span>
+      <h2 class="section-title">Mes <span class="highlight-gold">Compétences</span></h2>
+      <p class="section-subtitle">
+        Un aperçu de ma stack technique et des technologies que j'utilise au quotidien pour concevoir mes applications.
+      </p>
+    </div>
+
+    <!-- Grille des catégories de compétences -->
+    <div class="skills-grid">
+      @for (category of skillCategories; track category.title) {
+        <div class="skill-card">
+          <div class="card-header-skill">
+            <h3 class="category-title">{{ category.title }}</h3>
+            <p class="category-desc">{{ category.description }}</p>
+          </div>
+
+          <!-- Liste des compétences de la catégorie -->
+          <div class="skills-chips">
+            @for (skill of category.skills; track skill.name) {
+              <div class="skill-chip">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-level">{{ skill.level }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

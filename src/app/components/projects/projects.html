@@ -1,0 +1,66 @@
+<section id="projects" class="projects-section">
+    <div class="projects-container">
+        <!-- En tête de section -->
+
+        <div class="section-header">
+            <span class="section-tag">// PORTFOLIO</span>
+            <h2 class="section-title">Mes <span class="highlight-gold">Projets</span></h2>
+            <p class="section-subtitle">
+                Une sélection de réalisations techniques, de la conception d'architecture au déploiement.
+            </p>
+        </div>
+
+        <!-- Grille des projets -->
+         <div class="projects-grid">
+            @for (project of projectsList; track project.id) {
+                <article class="project-card" [class.featured-card]=""project.featured>
+
+                    <!-- Badge "Projet Phare" si featured === true -->
+                     @if (project.featured) {
+                        <div class="featured-badge">
+                            <span>⭐ Projet à la une</span>
+                        </div>
+                     }
+
+                     <div class="card-content">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+
+                        <!-- Statistiques / Highlights du project s'ils existent -->
+                         @if (project.stats && project.stats.length > 0){
+                            <div class="project-stats">
+                                @for (stat of project.stats; track stat.label) {
+                                    <div class="class-item">
+                                        <span class="stat-value">{{ stat.value }}</span>
+                                        <span class="stat-label">{{ stat.label }}</span>
+                                    </div>
+                                }
+                            </div>
+                         }
+
+                         <!-- Toutes les techs utilisées -->
+                        <div class="project-tags">
+                            @for (tag of project.tags; track tag) {
+                                <span class="tag-badge">{{ tag }}</span>
+                            }
+                        </div>
+
+                        <!-- Links -->
+                         <div class="project-links">
+                            @if (project.githubUrl) {
+                                <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="btn-link">
+                                    <span>Github</span>
+                                </a>
+                            }
+                            @if (project.demoUrl) {
+                                <a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="btn-link gold">
+                                    <span>Démo Live</span> ↗
+                                </a>
+                            }
+                         </div>
+                     </div>
+                </article>
+            }
+         </div>
+    </div>
+</section>

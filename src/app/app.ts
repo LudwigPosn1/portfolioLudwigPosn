@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar';
-import { HeroComponent } from './components/hero/hero'; // 1. Import du composant Hero
+import { HeroComponent } from './components/hero/hero';
+import { Projects } from './components/projects/projects';
+import { Skills } from './components/skills/skills';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent], // 2. Ajout dans les imports
+  imports: [NavbarComponent, HeroComponent, Projects, Skills],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
+
 export class App {
   title = 'portfolio-nba';
 }
