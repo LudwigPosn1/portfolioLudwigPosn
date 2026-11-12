@@ -9,10 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero.scss'
 })
 export class HeroComponent {
-  // Données dynamiques affichées dans la Hero Section
-  developerName = 'Étudiant en Ingénierie Informatique';
-  tagline = 'Transformer la passion du code et du sport en applications web performantes.';
+  developerName = 'Étudiant en informatique à Sup de Vinci';
   
-  // Compétences clés affichées sous forme de badges
-  skillsBadges = ['Angular', 'TypeScript', 'React', 'Python', 'Supabase'];
+  skillsBadges = ['Angular', 'React', 'Python', 'C++', 'PHP'];
 }

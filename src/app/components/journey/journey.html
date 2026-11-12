@@ -1,0 +1,46 @@
+<section id="parcours" class="journey-section">
+  <div class="journey-container">
+    <div class="section-header">
+      <span class="section-tag">// MON PARCOURS</span>
+      <h2 class="section-title">Formation & <span class="highlight-gold">expériences</span></h2>
+      <p class="section-subtitle">
+        Mon parcours scolaire, mes expériences professionnelles et mon engagement associatif.
+      </p>
+    </div>
+
+    <div class="journey-grid">
+      <article class="journey-card">
+        <h3>Formation</h3>
+        @for (entry of education; track entry.title) {
+          <div class="journey-entry">
+            <p class="entry-period">{{ entry.period }}</p>
+            <h4>{{ entry.title }}</h4>
+            <p class="entry-detail">{{ entry.detail }}</p>
+          </div>
+        }
+      </article>
+
+      <article class="journey-card">
+        <h3>Expériences professionnelles</h3>
+        @for (entry of experience; track entry.title) {
+          <div class="journey-entry">
+            <p class="entry-period">{{ entry.period }}</p>
+            <h4>{{ entry.title }}</h4>
+            <p class="entry-detail">{{ entry.detail }}</p>
+          </div>
+        }
+      </article>
+
+      <article class="journey-card">
+        <h3>Bénévolat</h3>
+        @for (entry of volunteering; track entry.title) {
+          <div class="journey-entry">
+            <p class="entry-period">{{ entry.period }}</p>
+            <h4>{{ entry.title }}</h4>
+            <p class="entry-detail">{{ entry.detail }}</p>
+          </div>
+        }
+      </article>
+    </div>
+  </div>
+</section>

@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 // Interface pour typer une compétence individuelle
 export interface Skill {
   name: string;
-  level: string; // Ex: "Avancé", "Intermédiaire"
-  icon?: string;
 }
 
 // Interface pour regrouper les compétences par catégorie
@@ -23,37 +21,59 @@ export interface SkillCategory {
   styleUrl: './skills.scss'
 })
 export class Skills {
-  // Données des compétences techniques
   skillCategories: SkillCategory[] = [
     {
-      title: 'Frontend & UI',
-      description: 'Maîtrise des frameworks modernes et des bonnes pratiques d\'intégration web.',
+      title: 'Développement web',
+      description: 'Langages et frameworks utilisés pour concevoir des applications et des sites web.',
       skills: [
-        { name: 'Angular', level: 'Avancé' },
-        { name: 'TypeScript', level: 'Avancé' },
-        { name: 'React', level: 'Intermédiaire' },
-        { name: 'HTML5 / SCSS', level: 'Avancé' },
-        { name: 'JavaScript (ES6+)', level: 'Avancé' }
+        { name: 'HTML' },
+        { name: 'CSS' },
+        { name: 'PHP' },
+        { name: 'JavaScript' },
+        { name: 'Angular' },
+        { name: 'React' }
       ]
     },
     {
-      title: 'Backend & Données',
-      description: 'Conception de logiques serveur et gestion des bases de données.',
+      title: 'Programmation & données',
+      description: 'Langages de programmation et bases de données abordés dans mon parcours.',
       skills: [
-        { name: 'Python', level: 'Intermédiaire' },
-        { name: 'Node.js', level: 'Intermédiaire' },
-        { name: 'Java / C / C++', level: 'Intermédiaire' },
-        { name: 'SQL / Supabase', level: 'Intermédiaire' }
+        { name: 'Python' },
+        { name: 'C' },
+        { name: 'C++' },
+        { name: 'Java' },
+        { name: 'SQL' }
       ]
     },
     {
-      title: 'DevOps & Outils',
-      description: 'Environnement de travail, versioning et déploiement.',
+      title: 'Outils & création',
+      description: 'Outils de conception, de création de contenu et d’hébergement.',
       skills: [
-        { name: 'Git & GitHub', level: 'Avancé' },
-        { name: 'VS Code / Cursor', level: 'Avancé' },
-        { name: 'Principes DevOps', level: 'En cours' },
-        { name: 'API REST', level: 'Avancé' }
+        { name: 'Microsoft Office' },
+        { name: 'SolidWorks' },
+        { name: 'DaVinci Resolve 18' },
+        { name: 'Hébergement OVH' }
+      ]
+    },
+    {
+      title: 'Qualités & langues',
+      description: 'Des compétences personnelles et linguistiques mises en pratique en équipe.',
+      skills: [
+        { name: 'Travail en équipe' },
+        { name: 'Organisation et écoute' },
+        { name: 'Agilité et créativité' },
+        { name: 'Français' },
+        { name: 'Anglais — C2' }
+      ]
+    },
+    {
+      title: 'Centres d’intérêt',
+      description: 'Les sujets et activités qui nourrissent ma curiosité au quotidien.',
+      skills: [
+        { name: 'Basketball — 10 ans' },
+        { name: 'Musique électronique' },
+        { name: 'Technologies & innovation' },
+        { name: 'Intelligence artificielle' }
       ]
     }
   ];

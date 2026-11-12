@@ -79,15 +79,14 @@
     /* Liste des puces de compétences */
     .skills-chips {
       display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.65rem;
 
       .skill-chip {
-        display: flex;
-        justify-content: space-between;
+        display: inline-flex;
         align-items: center;
         background-color: rgba(11, 19, 43, 0.6);
-        padding: 0.75rem 1rem;
+        padding: 0.55rem 0.75rem;
         border-radius: 8px;
         border: 1px solid rgba(255, 255, 255, 0.05);
         transition: background-color 0.2s, border-color 0.2s;
@@ -101,15 +100,6 @@
           font-weight: 600;
           color: var(--text-main);
           font-size: 0.95rem;
-        }
-
-        .skill-level {
-          font-size: 0.75rem;
-          font-weight: 600;
-          color: var(--warriors-gold);
-          background-color: rgba(255, 199, 44, 0.1);
-          padding: 0.2rem 0.5rem;
-          border-radius: 4px;
         }
       }
     }

@@ -1,0 +1,96 @@
+<footer id="contact" class="contact-footer-section">
+    <div class="contact-container">
+        <!-- En-tête de section Contact -->
+         <div class="section-header">
+            <span class="section-tag">RESTONS EN CONTACT</span>
+            <h2 class="section-title">Parlons de votre <span class="highlight-gold">projet</span></h2>
+            <p class="section-subtitle">
+                Une opportunité d’alternance, un projet ou une question ? Contactez-moi.
+            </p>
+         </div>
+
+         <!-- Contenu Principal : Infos & Formulaire -->
+        <div class="contact-grid">
+
+            <!-- Informations & Réseaux -->
+             <div class="contact-info">
+                <h3>Discutons de votre projet</h3>
+                <p>
+                    Étudiant en informatique à Sup de Vinci, je recherche une alternance pour me spécialiser en développement ou DevOps.
+                </p>
+
+                <div class="info-details">
+                    <div class="info-item">
+                       <span class="info-icon">📍</span>
+                       <span>Rennes, France</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <span>ludwigpoisson2105@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/LudwigPosn1" class="social-btn" target="_blank" rel="noopener noreferrer">GitHub </a>
+                    <a href="https://www.linkedin.com/in/ludwig-posn-7b7a15360/" class="social-btn" target="_blank" rel="noopener noreferrer">LinkedIn </a>
+                </div>
+             </div>
+
+             <!-- Bloc Formulaire de Contact -->
+            <div class="contact-form-wrapper">
+                <form (submit)="onSubmit()" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            [(ngModel)]="formData.name"
+                            placeholder="Votre nom"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            [(ngModel)]="formData.email" 
+                            placeholder="ton.email@exemple.com" 
+                            required
+                            />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="4" 
+                            [(ngModel)]="formData.message" 
+                            placeholder="Ton message..." 
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button class="btn-submit" type="submit">Envoyer le message</button>
+
+                    <!-- Message de confirmation -->
+                    @if (isSubmitted) {
+                        <div class="success-message">
+                            Merci pour votre message ! Je vous répondrai dès que possible.
+                        </div>
+                    }
+                        
+                </form>
+            </div>
+        </div>    
+        
+        <!-- Footer final -->
+        <div class="footer-bottom">
+            <p>© {{ currentYear }} • Conçu et développé par Ludwig Poisson.</p>
+        </div>
+    </div>
+</footer>

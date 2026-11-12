@@ -56,7 +56,7 @@
             flex-direction: column;
             justify-content: space-between;
             position: relative;
-            transition: transform 0.3 ease, vorder-color 0.3s ease, box-shadow 0.3 ease;*
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
 
             &:hover {
@@ -101,60 +101,30 @@
                 color: var(--text-muted);
                 font-size: 0.95rem;
                 line-height: 1.6;
-                margin-bottom: 1.5rem;
+                margin-bottom: 0.75rem;
             }
 
-            .project-stats {
-                display: flex;
-                gap: 1.5rem;
-                margin-bottom: 1.5rem;
-                padding: 0.75rem;
-                background: rgba(11, 19, 43, 0.6);
-                border-radius: 8px;
-
-
-                .stat-item {
-                    display: flex;
-                    flex-direction: column;
-
-
-                    .stat-value {
-                        font-weight: 700;
-                        color: var(--warriors-gold);
-                        font-size: 0.9rem;
-                    }
-
-                    .stat-label {
-                        font-size: 0.75rem;
-                        color: var(--text-muted);
-                    }
-                }
+            .project-period {
+                color: var(--warriors-gold);
+                font-size: 0.85rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
             }
 
 
-            /* Tags */
             .project-tags {
                 display: flex;
-                gap: 1rem;
+                flex-wrap: wrap;
+                gap: 0.5rem;
                 margin-top: auto;
 
-
-                .btn-link {
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    color: var(--text-main);
-                    transition: color 0.2s;
-
-                    &:hover {
-                        color: var(--warriors-gold);
-                    }
-
-                    &:gold {
-                        color: var(--warriors-gold);
-                        &:hover {
-                            color: #ffd857;
-                        }
-                    }
+                .tag-badge {
+                    padding: 0.3rem 0.65rem;
+                    border: 1px solid rgba(29, 66, 138, 0.5);
+                    border-radius: 6px;
+                    background-color: rgba(29, 66, 138, 0.25);
+                    color: #93c5fd;
+                    font-size: 0.8rem;
                 }
             }
         }

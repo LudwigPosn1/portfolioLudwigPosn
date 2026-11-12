@@ -8,9 +8,7 @@ export interface Project {
   description: string;
   tags: string[];
   featured: boolean; // Permet de mettre en avant un projet
-  githubUrl?: string;
-  demoUrl?: string;
-  stats?: { label: string; value: string }[]; 
+  period?: string;
 }
 
 @Component({
@@ -21,36 +19,36 @@ export interface Project {
   styleUrl: './projects.scss',
 })
 export class Projects {
-  // Liste de mes projets
   projectsList: Project[] = [
+    {
+      id: 'tablee-roche-aux-fees',
+      title: 'La Tablée de la Roche aux Fées',
+      description: 'Création du site web de l’association de A à Z et mise en ligne chez OVH.',
+      tags: ['HTML', 'CSS', 'PHP', 'OVH'],
+      featured: true,
+      period: '5 novembre 2025 – 21 mai 2026',
+    },
     {
       id: 'coachease',
       title: 'CoachEase',
-      description: 'Plateforme web permettant aux coachs sportifs de gérer leurs clients, planifier des séances et suivre les performances physiques en temps réel.',
-      tags: ['Angular', 'TypeScript', 'SCSS', 'Node.js', 'PostgreSQL'],
+      description: 'Application de gestion destinée aux coachs sportifs, actuellement en développement.',
+      tags: ['Angular', 'Supabase', 'PWA'],
       featured: true,
-      githubUrl: 'https://github.com/votre-repo/coachease',
-      demoUrl: 'https://coachease-demo.com',
-      stats: [
-        { label: 'Architecture', value: 'Clean Code' },
-        { label: 'UI/UX', value: 'Responsive' }
-      ]
+      period: 'En développement',
     },
     {
-      id: 'nba-tracker',
-      title: 'NBA Stats Dashboard',
-      description: 'Application de visualisation de statistiques NBA en temps réel avec graphiques interactifs et comparaison de joueurs.',
-      tags: ['Angular', 'RxJS', 'Chart.js', 'REST API'],
+      id: 'luminaire-escamotable',
+      title: 'Luminaire escamotable autonome',
+      description: 'Conception d’un objet fonctionnel, rédaction du cahier des charges et création de pièces industrielles.',
+      tags: ['C++', 'SolidWorks', 'Conception industrielle'],
       featured: false,
-      githubUrl: 'https://github.com/votre-repo/nba-tracker'
     },
     {
-      id: 'portfolio-v1',
-      title: 'Portfolio Modern Dark',
-      description: 'Mon portfolio personnel développé avec Angular et un Design System inspiré des Golden State Warriors.',
-      tags: ['Angular', 'SCSS', 'Standalone Components'],
+      id: 'nba-content',
+      title: 'Création de contenu NBA',
+      description: 'Création de chaînes YouTube, TikTok et Instagram, de la conception des contenus au montage vidéo.',
+      tags: ['DaVinci Resolve 18', 'YouTube', 'TikTok', 'Instagram'],
       featured: false,
-      githubUrl: 'https://github.com/votre-repo/portfolio'
     }
   ]
 }

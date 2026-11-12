@@ -16,6 +16,7 @@ export class NavbarComponent {
   navLinks = [
     { label: 'Accueil', href: '#hero' },
     { label: 'Projets', href: '#projects' },
+    { label: 'Parcours', href: '#parcours' },
     { label: 'Compétences', href: '#skills' },
     { label: 'Contact', href: '#contact' }
   ];
@@ -23,5 +24,9 @@ export class NavbarComponent {
   // Méthode pour basculer l'état du menu mobile
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }

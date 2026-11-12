@@ -6,20 +6,26 @@
       <span class="logo-text">Portfolio<span class="highlight">.dev</span></span>
     </a>
 
-    <!-- Menu de navigation Desktop -->
-    <nav class="navbar-links">
-      @for (link of navLinks; track link.label) {
-        <a [href]="link.href" class="nav-link">{{ link.label }}</a>
-      }
-    </nav>
+    <div class="navbar-menu" [class.is-open]="isMenuOpen" id="navbar-menu">
+      <nav class="navbar-links" aria-label="Navigation principale">
+        @for (link of navLinks; track link.label) {
+          <a [href]="link.href" class="nav-link" (click)="closeMenu()">{{ link.label }}</a>
+        }
+      </nav>
 
-    <!-- Bouton CTA (Call to Action) -->
-    <div class="navbar-action">
-      <a href="#contact" class="btn-gold">Me Contacter</a>
+      <div class="navbar-action">
+        <a href="#contact" class="btn-gold" (click)="closeMenu()">Me Contacter</a>
+      </div>
     </div>
 
-    <!-- Bouton Hamburger pour mobile (Optionnel / Extensible) -->
-    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Menu">
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-controls="navbar-menu"
+      [attr.aria-label]="isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+    >
       <span></span>
       <span></span>
       <span></span>
